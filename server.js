@@ -1,0 +1,13 @@
+var express = require('express');
+var app = express();
+var path = require('path');
+
+app.use(express.static('public'));
+
+app.get('/', function (req, res) {
+  res.render('index.html');
+});
+
+app.listen(3456, function(){
+  console.log('App is running on port 3000');
+});
